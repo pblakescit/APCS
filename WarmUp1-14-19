@@ -1,0 +1,43 @@
+
+/**
+ * Warm up 1/14/19
+ * @pblake 
+ * Complete the tasks in the code below.
+ */
+
+public class Starter1_14_19
+{
+    public static void main(String[] args)
+    {
+        String[] daysOfTheWeek = new String[7];
+        
+        //Task 1
+        //What will print out when you you uncomment the next line?
+        //System.out.println("Task one output" + daysOfTheWeek[3]);
+        
+        //Run it and compare with your prediction
+        
+        //Task 2
+        /*
+         * Assign each element in daysOfTheWeek with the appropriate string
+         * starting with Sunday, ending with Saturday.
+         */
+        
+        //Task 3
+        //Print each element in the array using a for loop.
+        
+        //(To be done in class) Print each element using a for each loop.
+        
+        
+        //Task 4 (Application)
+        /*
+         * Look at the algorithm posted on classroom. (Do not feel obligated to
+         * implement this!) Discuss, how could daysOfTheWeek be used in a method which has
+         * 3 int parameters(month, day year) and then returns the string of what day of the week it
+         * was? (This may be a nice extra credit assignment)
+         */
+        
+        
+        
+    }
+}
