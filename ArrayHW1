@@ -107,9 +107,8 @@ public class ArrayHW1
      //Write a method which returns an array that has all elements that are divisble by 3 removed.
      //System.out.println("testArray3 pre-removal of numbers divisble by 3")
      //print1DArray(testArray3);
-     //removeDiv3(testArray3);
      //System.out.println("testArray3 post-removal of numbers divisble by 3")
-     //System.out.println(removeDiv3(testArray3));
+     //print1DArray(removeDiv3(testArray3));
      
      
      
