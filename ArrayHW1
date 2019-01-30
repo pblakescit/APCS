@@ -32,13 +32,13 @@ public class ArrayHW1
      }
    }
    /* To be done in task 1 (uncomment when completed)
-   public static void oddCount1D(int[] a)
+   public static int oddCount1D(int[] a)
    {
    
    }
    
    
-   public static void oddCount2D(int[][] a)
+   public static int oddCount2D(int[][] a)
    {
    
    }
