@@ -1,121 +1,103 @@
-/**
- * @author pblake 1/30/19
- * The goal of this assignment is to write and use methods that change (mutate) and 
- * access elements of 1 and 2 dimensional arrays.
- * 
- * Write all of your methods above main. Complete the tasks in main to complete the 
- * assignment.Uncomment each method and corresponding print line as you go to ensure 
- * that the method you have written runs correctly.
- * 
- * Use the method headers I have provided you. Your methods should work for any
- * size one or two dimensional arrays. Use the test arrays to see if yours work,
- * but do not limit yourself to just those (i. e. no hard coding)
- * 
- */
-public class ArrayHW1 
+
+public class ArrayExample
 {
-   //Use this method to print 1D arrays of ints
-   public static void print1DArray(int[] a)
-   {
-     for(int val : a)
-       System.out.print(val + " ");
-   }
-   
-   //Use this method to print 2D arrays of ints
-   public static void print2DArray(int[][] a)
-   {
-     for(int[] val : a)
-     {
-       for(int i : val)
-         System.out.print(i + " ");
-       System.out.println();
-     }
-   }
-   /* To be done in task 1 (uncomment when completed)
-   public static int oddCount1D(int[] a)
-   {
-   
-   }
-   
-   
-   public static int oddCount2D(int[][] a)
-   {
-   
-   }
-   */
-   
-   /* To be done in task 2
-    public static void upToNine1D(int[] a)
-    {
-     
-    }
-    
-    public static void upToNine2D(int[][] a)
-    {
-    
-    }
-    */
-   
-   /* To be done in Task 3
-    public static int[] removeDiv3(int [] a)
-    {
-    
-    
-    }
-    */
+  //an object of type ArrayExample has 1 field, it is a 2D array of Strings
+  //this array is of 3 people with their corresponding emails. Each element represents 1 person.
+  private String[][] array;
   
-  
-   public static void main(String[] args)
-   {
-     int[] testArray1 = {3, 5, 8, 11, 4 , 7};
-     
-     int[][] testArray2 = {
-                           {1, 2, 3, 4},
-                           {5, 6, 7, 8},
-                           {9, 10, 11, 12}
+  //This no args constructor sets the field array to the following values
+  ArrayExample()
+  {
+    array = new String[][]{{"Dan", "dantheman@gmail.com"},
+                           {"Kate","katethealien@hotmail.com"},
+                           {"Sven","Sr8upCoder@netscape.net"}
                           };
-     
-     System.out.println("Example of printing out testArray1(a 1d array)");
-     print1DArray(testArray1);
-     
+  }
+  
+  
+  
+  //How to visit each element in a 2D Array called traversing
+  //With for loops
+  public void printArray()
+  {
+    for(int r = 0; r < array.length;r++)//goes over each row
+    {
+     for(int c = 0; c < array[0].length; c++)
+     {
+       System.out.print(array[r][c] + " ");
+     }
      System.out.println();
-     System.out.println("Example of printling out testArray2 (a 2d array)");
-     print2DArray(testArray2);
-     
-     //Task 1
-   
-     //Write a method that tallies all of the odd ints of each test array.
-     //System.out.println("There are " + oddCount1D(testArray1)+ " odd ints in testArray1.");
-     //System.out.println("There are " + oddCount2D(testArray2)+ " odd ints in testArray1.");
-     
-     //Task 2
-     
-     //Write a method which replaces all ints in each test array that are >=5 with 9.
-     //System.out.println("testArray1 pre-change");
-     //print1DArray(testArray1);
-     //System.out.println("testArray1 pre-change");
-     //print2Darray(testArray2);
-     //upToNine1D(TestArray1);
-     //upToNine2D(Testarray2);
-     //System.out.println("testArray1 post-change");
-     //print1DArray(testArray1);
-     //System.out.println("testArray1 post-change");
-     //print2Darray(testArray2);
-     
-     //The following array is used only for task 3
-     int[] testArray3 = new int[] {3, 5, 7, 39, 8, 2, 9, 4, 12};
-     //Write a method which returns an array that has all elements that are divisble by 3 removed.
-     //System.out.println("testArray3 pre-removal of numbers divisble by 3")
-     //print1DArray(testArray3);
-     //System.out.println("testArray3 post-removal of numbers divisble by 3")
-     //print1DArray(removeDiv3(testArray3));
-     
-   }
+    }
+    
+    }
+    
+  
+  //With for each loops
+  public void printForEach()
+  {
+    for(String[] sa : array)//for each string array sa in array
+    {
+      for(String s : sa)//for each string s in sa
+      {
+        System.out.print(s + " ");
+      }
+      System.out.println();
+    }
+  
+  }
+  
+  //Method which returns a string of emails seperated by commas
+  
+  public String emailList()
+  {
+    String emailList = "";
+    for(int r = 0;r < array.length; r++)
+    {
+      emailList += array[r][1] + ", ";
+    }
+    
+    return emailList;
+  }
+  //Add person to the array
+  public void addPerson(String name, String email)
+  {
+    //Create an array one row longer
+    String[][] newArray = new String[array.length + 1][array[0].length];
+    //Fill entries of newArray with entries of array
+    for(int r = 0; r < array.length;r++)
+    {
+      for(int c = 0; c < array[0].length; c++)
+      {
+        newArray[r][c]=array[r][c];
+      }
+     }
+    //Add in the new row, which is a string array
+    newArray[newArray.length - 1]= new String[] {name, email};
+    array = newArray; //set the field to newArray
+  }
+ 
   
   
   
   
-  
-  
+  public static void main(String[] args)
+  {
+    ArrayExample a1 = new ArrayExample(); //creates the array
+    //Print the array
+    //a1.printArray();
+    //a1.printForEach();
+    
+    //Get mailing list (returns a string of emails seperated by commas
+    System.out.println(a1.emailList());
+    //Method which returns an array
+    
+    //Method which adds an entry
+    a1.addPerson("Jorge", "sickbeets@amazonweb.io");
+    a1.printArray();
+    
+    //method which deletes an entry.
+    
+    
+  }
+
 }
-      
