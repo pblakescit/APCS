@@ -1,0 +1,24 @@
+
+/**
+ * @pblake
+ * ArrayList Notes
+ * 
+ */
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class ArrayListNotes
+{
+    //Advantages of ArrayLists
+    /*
+     * 
+     */
+    public static void main(String [] args)
+    {
+        //Array lists hold elements of a specified type
+        
+        ArrayList<String> roster; //initialization
+        
+    }
+}
