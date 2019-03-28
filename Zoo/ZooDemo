@@ -1,0 +1,20 @@
+
+/**
+ * Class to test constructors and methods
+ * of Lion and house cat
+ *
+ */
+public class ZooDemo
+{
+   public static void main(String [] args)
+   {
+       Lion l1 = new Lion("Mufasa", 8, true);
+       HouseCat h1 = new HouseCat("Rory");
+       
+       System.out.println(l1.sleep());
+       System.out.println(h1.sleep());
+       System.out.println("The name of l1 is " +  l1.getName());
+       System.out.println("The name of h1 is " + h1.getName());
+       
+   }
+}
