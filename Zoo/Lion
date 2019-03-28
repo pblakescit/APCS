@@ -1,0 +1,23 @@
+
+/**
+ * Class whch represents a Lion
+ * @pblake 3/28
+ */
+public class Lion extends Felis
+{
+   //instance variables exclusive to Lion
+   private int timesPoached;
+   private boolean isKing;
+   
+   public Lion(String n, int t, boolean iK)
+   {
+       super(n);
+       timesPoached = 0;
+       isKing = true;
+   }
+    
+   public String sleep()
+   {
+       return "In the jungle, the mighty jungle, the lion sleeps tonight";
+   }
+}
