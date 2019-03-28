@@ -1,0 +1,37 @@
+
+/**
+ * Write a description of class HouseCat here.
+ *
+ */
+public class HouseCat extends Felis
+{
+   //Fields
+   boolean isRescue;
+   String preferredNip;
+   
+   //Constructors of HouseCat with various calls to super
+   public HouseCat()
+   {
+       super();
+       isRescue = true;
+       preferredNip = "Yeowww Organic Catnip";
+   }
+   public HouseCat(String n)
+   {
+       super(n);
+       isRescue = false;
+       preferredNip = "Kong Natural Nip";
+   }
+   public HouseCat(double w, String s, boolean b, int i, boolean iR,String s2)
+   {
+       super(w, s, b, i); //calls the constructor of the super class 
+       isRescue = iR; //these fields specific to HouseCat are assigned
+       preferredNip = s2;
+   }
+   
+   public String sleep() //must  be written, since in super abstract class
+   {
+       return "Your housecat " + getName() + " is sleeping, it always sleeps";
+   }
+   
+}
