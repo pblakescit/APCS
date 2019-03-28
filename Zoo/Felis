@@ -1,0 +1,57 @@
+
+/**
+ * @pblake
+ * Class which represents a Felis
+ */
+//abstract means this class can't be instantiated
+public abstract class Felis
+{
+    //Fields of the super class
+    private double weight;
+    private String name;
+    private boolean isAlive;
+    private int age;
+    
+    //Constructors of the Super Class
+   public Felis(String n)
+   {
+       name = n;
+       weight  = 5;
+       isAlive = true;
+       age = 3;
+   }
+    
+   public Felis()
+   {
+       weight = 10;
+       name = "Big Chungus";
+       isAlive = true;
+       age = 5;
+   }
+    
+    
+    public Felis(double w, String s, boolean b, int i)
+    {
+        weight = w;
+        name = s;
+        isAlive = b;
+        age = i;
+    }
+    
+    //Methods of the Super Class
+    public void lick(int n) //not abstract does not need to be written in subclasses
+    {
+        n = Math.abs(n);
+        for(int i = 0; i < n;i++)
+        {
+            System.out.println("LICK");
+        }
+    }
+    
+    public String getName()
+    {
+        return this.name;
+    }
+    
+    public abstract String sleep(); //rough draft Kyle analogy
+}
