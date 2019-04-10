@@ -1,0 +1,36 @@
+
+/**
+ * Class which demonstrates an how 3 recursive 
+ * methods operate
+ *
+ */
+public class RecursionDemo
+{
+   /*
+    * What is a recursive method?
+    */
+   
+   //pre-condition n > 1
+   public static int factorial(int n)
+   {
+       return 1;
+   }
+   
+   //Precondtion n > 0
+   public static int digitLength(int n)
+   {
+       return 1; 
+   }
+   
+   
+   public static void printStars()
+   {
+       
+   }
+   
+   //Test your methods in main
+   public static void main(String [] args)
+   {
+
+   }
+}
